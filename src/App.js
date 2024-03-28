@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
 import Blockchain from './Blockchain';
@@ -10,12 +10,12 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Switch>
+      <Routes>
         <Route path="/" exact component={Home} />
         <Route path="/blockchain" component={Blockchain} />
         <Route path="/solana" component={Solana} />
         <Route path="/wallet" component={Wallet} />
-      </Switch>
+      </Routes>
     </Router>
   );
 }
