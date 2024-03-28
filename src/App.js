@@ -11,10 +11,10 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" exact component={Home} />
-        <Route path="/blockchain" component={Blockchain} />
-        <Route path="/solana" component={Solana} />
-        <Route path="/wallet" component={Wallet} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/blockchain" element={<Blockchain/>} />
+        <Route path="/solana" element={<Solana/>} />
+        <Route path="/wallet" element={<Wallet/>} />
       </Routes>
     </Router>
   );
