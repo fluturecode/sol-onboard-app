@@ -14,7 +14,7 @@ const Blockchain= () => (
     <ul className="list-disc list-inside mb-4">
       <li>Decentralization</li>
       <li>Transparency</li>
-      <li>Security</li>
+      {/* <li>Security</li> */}
       <li>Improved traceability</li>
     </ul>
 

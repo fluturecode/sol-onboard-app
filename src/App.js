@@ -6,7 +6,6 @@ import Solana from './Solana';
 import Wallet from './Wallet';
 import { ThemeProvider } from './ThemeContext';
 
-
 function App() {
   return (
     <ThemeProvider>
