@@ -1,41 +1,34 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTheme } from './ThemeContext'; // Adjust this import path based on your project structure
 
 const Navbar = () => {
+  const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
   return (
-    <nav className="bg-gray-800 text-white p-4 shadow-lg">
-      <ul className="flex justify-center space-x-4">
-        <li>
-          <Link
-            to="/"
-            className={`hover:text-yellow-300 ${location.pathname === "/" ? "text-yellow-300" : "text-white"}`}>
+    <nav className={`flex justify-between items-center px-6 py-4 shadow-md ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'}`}>
+      <div className="flex items-center space-x-4">
+        <Link to="/" className="text-xl font-bold hover:text-blue-500 transition-colors">
+          Brand
+        </Link>
+        <div className="hidden md:flex items-center space-x-8 border-l-2 border-gray-200 pl-4">
+          <Link to="/" className={`py-2 border-b-2 border-transparent hover:border-blue-500 transition-colors ${location.pathname === "/" ? "border-blue-500 font-semibold" : ""}`}>
             Home
           </Link>
-        </li>
-        <li>
-          <Link
-            to="/blockchain"
-            className={`hover:text-yellow-300 ${location.pathname === "/blockchain" ? "text-yellow-300" : "text-white"}`}>
+          <Link to="/blockchain" className={`py-2 border-b-2 border-transparent hover:border-blue-500 transition-colors ${location.pathname === "/blockchain" ? "border-blue-500 font-semibold" : ""}`}>
             Blockchain
           </Link>
-        </li>
-        <li>
-          <Link
-            to="/solana"
-            className={`hover:text-yellow-300 ${location.pathname === "/solana" ? "text-yellow-300" : "text-white"}`}>
+          <Link to="/solana" className={`py-2 border-b-2 border-transparent hover:border-blue-500 transition-colors ${location.pathname === "/solana" ? "border-blue-500 font-semibold" : ""}`}>
             Solana
           </Link>
-        </li>
-        <li>
-          <Link
-            to="/wallet"
-            className={`hover:text-yellow-300 ${location.pathname === "/wallet" ? "text-yellow-300" : "text-white"}`}>
+          <Link to="/wallet" className={`py-2 border-b-2 border-transparent hover:border-blue-500 transition-colors ${location.pathname === "/wallet" ? "border-blue-500 font-semibold" : ""}`}>
             Wallet Setup
           </Link>
-        </li>
-      </ul>
+        </div>
+      </div>
+      <button onClick={toggleTheme} className="p-2 rounded-full focus:outline-none focus:ring focus:ring-blue-500 transition">
+        {/* Theme toggle icon */}
+      </button>
     </nav>
   );
 };
