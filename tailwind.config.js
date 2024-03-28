@@ -1,7 +1,5 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     extend: {},
   },
@@ -9,5 +7,11 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  resolve: {
+    fallback: {
+      zlib: require.resolve('browserify-zlib'),
+      url: require.resolve('url/'),
+    },
+  }
 }
 

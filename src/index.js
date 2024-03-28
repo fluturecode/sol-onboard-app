@@ -26,7 +26,8 @@ root.render(
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 reportWebVitals();
