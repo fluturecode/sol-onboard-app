@@ -24,6 +24,9 @@ const Navbar = () => {
           <Link to="/wallet" className={`py-2 border-b-2 border-transparent hover:border-blue-500 transition-colors ${location.pathname === "/wallet" ? "border-blue-500 font-semibold" : ""}`}>
             Wallet Setup
           </Link>
+          <Link to="/security" className={`py-2 border-b-2 border-transparent hover:border-blue-500 transition-colors ${location.pathname === "/wallet" ? "border-blue-500 font-semibold" : ""}`}>
+            Security
+          </Link>
         </div>
       </div>
       <button onClick={toggleTheme} className="p-2 rounded-full focus:outline-none focus:ring focus:ring-blue-500 transition">

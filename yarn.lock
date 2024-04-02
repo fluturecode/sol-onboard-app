@@ -94,7 +94,7 @@
     "@jridgewell/trace-mapping" "^0.3.25"
     jsesc "^2.5.1"
 
-"@babel/helper-annotate-as-pure@^7.22.5":
+"@babel/helper-annotate-as-pure@^7.18.6", "@babel/helper-annotate-as-pure@^7.22.5":
   version "7.22.5"
   resolved "https://registry.yarnpkg.com/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.22.5.tgz#e7f06737b197d580a01edf75d97e2c8be99d3882"
   integrity sha512-LvBTxu8bQSQkcyKOU+a1btnNFQ1dMAd0R6PyW3arXes06F6QLWLIrd681bxRPIXlrMGR3XYnW9JyML7dP3qgxg==
@@ -119,7 +119,7 @@
     lru-cache "^5.1.1"
     semver "^6.3.1"
 
-"@babel/helper-create-class-features-plugin@^7.18.6", "@babel/helper-create-class-features-plugin@^7.24.1":
+"@babel/helper-create-class-features-plugin@^7.18.6", "@babel/helper-create-class-features-plugin@^7.21.0", "@babel/helper-create-class-features-plugin@^7.24.1":
   version "7.24.1"
   resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.24.1.tgz#db58bf57137b623b916e24874ab7188d93d7f68f"
   integrity sha512-1yJa9dX9g//V6fDebXoEfEsxkZHk3Hcbm+zLhyu6qVgYFLvmTALTeV+jNU9e5RnYtioBrGEOdoI2joMSNQ/+aA==
@@ -376,6 +376,16 @@
   version "7.21.0-placeholder-for-preset-env.2"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.0-placeholder-for-preset-env.2.tgz#7844f9289546efa9febac2de4cfe358a050bd703"
   integrity sha512-SOSkfJDddaM7mak6cPEpswyTRnuRltl429hMraQEglW+OkovnCzsiszTmsrlY//qLFjCpQDFRvjdm2wA5pPm9w==
+
+"@babel/plugin-proposal-private-property-in-object@^7.21.11":
+  version "7.21.11"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.11.tgz#69d597086b6760c4126525cfa154f34631ff272c"
+  integrity sha512-0QZ8qP/3RLDVBwBFoWAwCtgcDZJVwA5LUJRZU8x2YFfKNuFq161wK3cuGrALu5yiPu+vzwTAg/sMWVNeWeNyaw==
+  dependencies:
+    "@babel/helper-annotate-as-pure" "^7.18.6"
+    "@babel/helper-create-class-features-plugin" "^7.21.0"
+    "@babel/helper-plugin-utils" "^7.20.2"
+    "@babel/plugin-syntax-private-property-in-object" "^7.14.5"
 
 "@babel/plugin-syntax-async-generators@^7.8.4":
   version "7.8.4"
@@ -1363,7 +1373,7 @@
   resolved "https://registry.yarnpkg.com/@ethereumjs/rlp/-/rlp-5.0.2.tgz#c89bd82f2f3bec248ab2d517ae25f5bbc4aac842"
   integrity sha512-DziebCdg4JpGlEqEdGgXmjqcFoJi+JGulUXwEjsZGAscAQ7MyD/7LE/GVCP29vEQxKc7AAwjT3A2ywHp2xfoCA==
 
-"@ethereumjs/tx@^4.1.2":
+"@ethereumjs/tx@^4.1.2", "@ethereumjs/tx@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@ethereumjs/tx/-/tx-4.2.0.tgz#5988ae15daf5a3b3c815493bc6b495e76009e853"
   integrity sha512-1nc6VO4jtFd172BbSnTnDQVr9IYBFl1y4xPzZdtkrkKIncBCkdbgfdRV+MiTkJYAtTxvV12GRZLqBFT1PNK6Yw==
@@ -1983,6 +1993,21 @@
     semver "^7.3.8"
     superstruct "^1.0.3"
 
+"@metamask/utils@^8.4.0":
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/@metamask/utils/-/utils-8.4.0.tgz#f44812c96467a4e1b70b2edff6ee89a9caa4e354"
+  integrity sha512-dbIc3C7alOe0agCuBHM1h71UaEaEqOk2W8rAtEn8QGz4haH2Qq7MoK6i7v2guzvkJVVh79c+QCzIqphC3KvrJg==
+  dependencies:
+    "@ethereumjs/tx" "^4.2.0"
+    "@noble/hashes" "^1.3.1"
+    "@scure/base" "^1.1.3"
+    "@types/debug" "^4.1.7"
+    debug "^4.3.4"
+    pony-cause "^2.1.10"
+    semver "^7.5.4"
+    superstruct "^1.0.3"
+    uuid "^9.0.1"
+
 "@mobily/ts-belt@^3.13.1":
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/@mobily/ts-belt/-/ts-belt-3.13.1.tgz#8f8ce2a2eca41d88c2ca70c84d0f47d0f7f5cd5f"
@@ -2027,7 +2052,7 @@
   resolved "https://registry.yarnpkg.com/@noble/hashes/-/hashes-1.3.3.tgz#39908da56a4adc270147bb07968bf3b16cfe1699"
   integrity sha512-V7/fPHgl+jsVPXqqeOzT8egNj2iBIVt+ECeMMG8TdcnTikP3oaBtUVqpT/gYCR68aEBJSF+XbYUxStjbFMqIIA==
 
-"@noble/hashes@1.4.0", "@noble/hashes@^1.2.0", "@noble/hashes@^1.3.3":
+"@noble/hashes@1.4.0", "@noble/hashes@^1.2.0", "@noble/hashes@^1.3.1", "@noble/hashes@^1.3.3":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@noble/hashes/-/hashes-1.4.0.tgz#45814aa329f30e4fe0ba49426f49dfccdd066426"
   integrity sha512-V1JJ1WTRUqHHrOSh597hURcMqVKVGL/ea3kv0gSnEdsEZ0/+VyPghM1lMNGc00z7CIQorSvbKpuJkxvuHbvdbg==
@@ -2324,7 +2349,7 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.10.0.tgz#b88671c367284bb50b1cb6a842d7e0d98e9f4e55"
   integrity sha512-ih6xH1dOGBTP/RNc/QbnVLLa/s80SkXydI7tnyq+a2eIdd7gDsmSpD1Jz7T1oCa+GIsVTyQCR3cW0tlYB97iFg==
 
-"@scure/base@~1.1.4":
+"@scure/base@^1.1.3", "@scure/base@~1.1.4":
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/@scure/base/-/base-1.1.6.tgz#8ce5d304b436e4c84f896e0550c83e4d88cb917d"
   integrity sha512-ok9AWwhcgYuGG3Zfhyqg+zwl+Wn5uE+dwC0NV/2qQkx4dABbb/bx96vWu8NSj+BNjjSjno+JRYRjle1jV08k3g==
@@ -10420,6 +10445,11 @@ pngjs@^3.3.0:
   resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.4.0.tgz#99ca7d725965fb655814eaf65f38f12bbdbf555f"
   integrity sha512-NCrCHhWmnQklfH4MtJMRjZ2a8c80qXeMlQMv2uVp9ISJMTt562SbGd6n2oq0PaPgKm7Z6pL9E2UlLIhC+SHL3w==
 
+pony-cause@^2.1.10:
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/pony-cause/-/pony-cause-2.1.10.tgz#828457ad6f13be401a075dbf14107a9057945174"
+  integrity sha512-3IKLNXclQgkU++2fSi93sQ6BznFuxSLB11HdvZQ6JW/spahf/P1pAHBQEahr20rs0htZW0UDkM1HmA+nZkXKsw==
+
 possible-typed-array-names@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/possible-typed-array-names/-/possible-typed-array-names-1.0.0.tgz#89bb63c6fada2c3e90adc4a647beeeb39cc7bf8f"
@@ -13305,7 +13335,7 @@ uuid@^7.0.3:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
   integrity sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
 
-uuid@^9.0.0:
+uuid@^9.0.0, uuid@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.1.tgz#e188d4c8853cc722220392c424cd637f32293f30"
   integrity sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==

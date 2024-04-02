@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@craco/craco": "^7.1.0",
+    "@metamask/utils": "^8.4.0",
     "@project-serum/sol-wallet-adapter": "^0.2.6",
     "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/wallet-adapter-react": "^0.15.35",
