@@ -16,7 +16,9 @@ const wallets = [
   new SolflareWalletAdapter(),
 ];
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+
 root.render(
   <React.StrictMode>
     <ConnectionProvider endpoint={endpoint}>
@@ -27,7 +29,6 @@ root.render(
       </WalletProvider>
     </ConnectionProvider>
   </React.StrictMode>,
-  document.getElementById('root')
 );
 
 reportWebVitals();
